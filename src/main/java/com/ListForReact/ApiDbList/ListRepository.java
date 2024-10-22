@@ -2,10 +2,12 @@ package com.ListForReact.ApiDbList;
 
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 @Repository
+@CrossOrigin
 public class ListRepository {
     private final JdbcClient jdbcClient;
 
