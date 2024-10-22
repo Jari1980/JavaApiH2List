@@ -18,6 +18,10 @@ public class GoodThing {
         this.eatable = eatable;
     }
 
+    public Long getID() {
+        return ID;
+    }
+
     public String getName() {
         return name;
     }
