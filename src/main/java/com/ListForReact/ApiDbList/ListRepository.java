@@ -3,7 +3,6 @@ package com.ListForReact.ApiDbList;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -14,9 +13,9 @@ public class ListRepository {
         this.jdbcClient = jdbcClient;
     }
 
-    public List<GoodThingList> findAll(){
+    public List<GoodThing> findAll(){
         return jdbcClient.sql("select * from goodthinglist")
-                .query(GoodThingList.class)
+                .query(GoodThing.class)
                 .list();
     }
 

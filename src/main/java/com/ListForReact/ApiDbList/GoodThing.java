@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "GOODTHINGLIST")
-public class GoodThingList {
+public class GoodThing {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
@@ -13,7 +13,7 @@ public class GoodThingList {
 
     private boolean eatable;
 
-    public GoodThingList(String name, boolean eatable) {
+    public GoodThing(String name, boolean eatable) {
         this.name = name;
         this.eatable = eatable;
     }
