@@ -15,11 +15,11 @@ public class ListController {
     }
 
     @GetMapping("")
-    public List<GoodThingList> findAll() {
+    public List<GoodThing> findAll() {
         return listRepository.findAll();
     }
     @PostMapping("/add")
-    public void add(@RequestBody GoodThingList item){
+    public void add(@RequestBody GoodThing item){
         listRepository.create(item.getName(), item.isEatable());
     }
     @PostMapping("/seed")
